@@ -1,5 +1,4 @@
-:root,
-[data-theme="dark"] {
+:root {
   /* Color Tokens - Backgrounds (Obsidian & Deep Slate Navy) */
   --bg-deep: #030712;
   --bg-dark: #070d1e;
@@ -61,18 +60,18 @@
 }
 
 [data-theme="light"] {
-  /* Color Tokens - Backgrounds (Clean, Professional Crisp Slate & Pearl White) */
-  --bg-deep: #f8fafc;
-  --bg-dark: #f1f5f9;
+  /* Color Tokens - Backgrounds (Crisp Slate, Pearl White & Technical Gray) */
+  --bg-deep: #f1f5f9;
+  --bg-dark: #e2e8f0;
   --bg-surface: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card: rgba(255, 255, 255, 0.96);
   --bg-card-hover: #ffffff;
-  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-header: rgba(255, 255, 255, 0.94);
   --bg-input: #ffffff;
-  --bg-footer: #edf2f7;
-  --border-subtle: rgba(0, 102, 238, 0.18);
+  --bg-footer: #e2e8f0;
+  --border-subtle: rgba(0, 102, 238, 0.16);
   --border-light: rgba(15, 23, 42, 0.08);
-  --border-active: rgba(0, 102, 238, 0.55);
+  --border-active: rgba(0, 102, 238, 0.5);
 
   /* Brand Accents - Vibrant Corporate Blue with Strong Contrast */
   --corp-primary: #0066ee;
@@ -96,14 +95,14 @@
 
   /* Typography Colors */
   --text-pure: #0f172a;
-  --text-title: #0f172a;
+  --text-title: #0b1528;
   --text-primary: #1e293b;
   --text-secondary: #475569;
   --text-muted: #64748b;
   --text-dim: #94a3b8;
 
   /* Shadows */
-  --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 15px -3px rgba(0, 102, 238, 0.06);
+  --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 15px -3px rgba(0, 102, 238, 0.04);
   --shadow-glow: 0 0 25px rgba(0, 102, 238, 0.2);
   --shadow-glow-amber: 0 0 25px rgba(217, 119, 6, 0.2);
   --shadow-glow-crimson: 0 0 25px rgba(225, 29, 72, 0.2);
@@ -136,7 +135,7 @@ body {
   max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 /* Custom Scrollbar */
@@ -275,4 +274,408 @@ button {
   .container {
     padding: 0 16px;
   }
+}
+
+/* =========================================================
+   LIGHT THEME GLOBAL MASTER STYLING ([data-theme="light"])
+   ========================================================= */
+
+/* 1. Header & Navigation */
+[data-theme="light"] .corp-header {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* 2. Logo in Light Mode (The white "R" monogram turns into corporate blue with high contrast) */
+[data-theme="light"] .rosat-official-logo-img,
+[data-theme="light"] .about-spotlight-logo {
+  filter: brightness(0) saturate(100%) invert(26%) sepia(90%) saturate(2300%) hue-rotate(205deg) !important;
+}
+
+[data-theme="light"] .brand-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .brand-subtitle {
+  color: #0066ee !important;
+}
+
+[data-theme="light"] .nav-item {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .nav-item:hover {
+  color: #0066ee !important;
+}
+
+/* 3. Hero Section in Light Mode */
+[data-theme="light"] .corp-hero {
+  background-color: #f1f5f9 !important;
+}
+
+[data-theme="light"] .hero-bg-img {
+  opacity: 0.18 !important;
+  filter: grayscale(20%) brightness(1.15) contrast(0.85) !important;
+}
+
+[data-theme="light"] .hero-overlay-gradient {
+  background: radial-gradient(circle at 70% 30%, rgba(241, 245, 249, 0.4) 0%, rgba(241, 245, 249, 0.92) 75%),
+              linear-gradient(180deg, rgba(241, 245, 249, 0.8) 0%, rgba(241, 245, 249, 0.6) 40%, #f1f5f9 100%) !important;
+}
+
+[data-theme="light"] .hero-grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(0, 102, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 102, 238, 0.05) 1px, transparent 1px) !important;
+}
+
+[data-theme="light"] .highlight-text {
+  background: linear-gradient(135deg, #0055d4 0%, #0084ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .hero-heading {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .hero-description {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .hero-badge {
+  background: rgba(0, 102, 238, 0.08) !important;
+  border-color: rgba(0, 102, 238, 0.25) !important;
+  color: #0066ee !important;
+}
+
+/* 4. Stat Boxes in Light Mode */
+[data-theme="light"] .stat-box {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .stat-number {
+  color: #0066ee !important;
+}
+
+[data-theme="light"] .stat-label {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .stat-sub {
+  color: #64748b !important;
+}
+
+/* 5. Project Portals (GESDRON & DEPRON in Hero) */
+[data-theme="light"] .portal-card {
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .ges-portal {
+  border: 1px solid rgba(217, 119, 6, 0.3) !important;
+}
+
+[data-theme="light"] .ges-portal:hover {
+  border-color: #d97706 !important;
+  box-shadow: 0 12px 35px rgba(217, 119, 6, 0.15) !important;
+}
+
+[data-theme="light"] .rescue-portal {
+  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+}
+
+[data-theme="light"] .rescue-portal:hover {
+  border-color: #e11d48 !important;
+  box-shadow: 0 12px 35px rgba(225, 29, 72, 0.15) !important;
+}
+
+[data-theme="light"] .portal-name {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .portal-desc {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .portal-domain-tag {
+  background: rgba(15, 23, 42, 0.06) !important;
+  color: #475569 !important;
+}
+
+/* 6. About Section (Biz Kimiz) */
+[data-theme="light"] .about-section {
+  background-color: #f8fafc !important;
+}
+
+[data-theme="light"] .about-content-card {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .about-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .about-p {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .vm-card {
+  background: #f8fafc !important;
+  border-color: rgba(0, 102, 238, 0.15) !important;
+}
+
+[data-theme="light"] .vm-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .vm-text {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .logo-spotlight-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 102, 238, 0.25) !important;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .metric-card {
+  background: #f8fafc !important;
+  border-color: rgba(0, 102, 238, 0.15) !important;
+}
+
+[data-theme="light"] .metric-big {
+  color: #0066ee !important;
+}
+
+[data-theme="light"] .metric-text {
+  color: #475569 !important;
+}
+
+/* 7. Capabilities Section (Ar-Ge Yetkinlikleri) */
+[data-theme="light"] .capabilities-section {
+  background: linear-gradient(180deg, #f1f5f9 0%, #e9eef5 50%, #f1f5f9 100%) !important;
+}
+
+[data-theme="light"] .section-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .section-subtitle {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .cap-card {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05) !important;
+}
+
+[data-theme="light"] .cap-card:hover {
+  border-color: #0066ee !important;
+  box-shadow: 0 16px 35px rgba(0, 102, 238, 0.12) !important;
+}
+
+[data-theme="light"] .cap-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .cap-text {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .cap-features {
+  border-top-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .cap-features li {
+  color: #334155 !important;
+}
+
+/* 8. Flagship Detailed Projects Section */
+[data-theme="light"] .flagship-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #f8fafc 100%) !important;
+}
+
+[data-theme="light"] .solis-theme {
+  background: #ffffff !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 12px 35px rgba(217, 119, 6, 0.08) !important;
+}
+
+[data-theme="light"] .rescue-theme {
+  background: #ffffff !important;
+  border-color: rgba(225, 29, 72, 0.3) !important;
+  box-shadow: 0 12px 35px rgba(225, 29, 72, 0.08) !important;
+}
+
+[data-theme="light"] .vms-theme {
+  background: #ffffff !important;
+  border-color: rgba(0, 102, 238, 0.3) !important;
+  box-shadow: 0 12px 35px rgba(0, 102, 238, 0.08) !important;
+}
+
+[data-theme="light"] .p-main-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .p-description {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .p-feature-list li {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .p-feature-list strong {
+  color: #0b1528 !important;
+}
+
+/* 9. Sectoral Solutions */
+[data-theme="light"] .sectors-section {
+  background: #f1f5f9 !important;
+}
+
+[data-theme="light"] .sector-card {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="light"] .sector-card:hover {
+  border-color: #0066ee !important;
+  box-shadow: 0 12px 30px rgba(0, 102, 238, 0.12) !important;
+}
+
+[data-theme="light"] .sector-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .sector-desc {
+  color: #475569 !important;
+}
+
+/* 10. References Section */
+[data-theme="light"] .references-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 50%, #f8fafc 100%) !important;
+}
+
+[data-theme="light"] .ref-badge-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 102, 238, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="light"] .ref-name {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .ref-category {
+  color: #0066ee !important;
+}
+
+/* 11. Contact Section & Form */
+[data-theme="light"] .contact-section {
+  background: #f1f5f9 !important;
+}
+
+[data-theme="light"] .contact-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 102, 238, 0.2) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .contact-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .contact-subtitle {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .c-label {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .c-val {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .form-group label {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .form-input {
+  background: #f8fafc !important;
+  color: #0b1528 !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+[data-theme="light"] .form-input:focus {
+  background: #ffffff !important;
+  border-color: #0066ee !important;
+  box-shadow: 0 0 16px rgba(0, 102, 238, 0.2) !important;
+}
+
+[data-theme="light"] .form-select option {
+  background: #ffffff !important;
+  color: #0b1528 !important;
+}
+
+/* 12. Footer */
+[data-theme="light"] .corp-footer {
+  background: #e2e8f0 !important;
+  border-top-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+[data-theme="light"] .footer-tagline,
+[data-theme="light"] .footer-address {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .footer-col-title {
+  color: #0b1528 !important;
+}
+
+[data-theme="light"] .footer-link {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .footer-link:hover {
+  color: #0066ee !important;
+}
+
+[data-theme="light"] .f-chip {
+  background: rgba(15, 23, 42, 0.05) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  color: #334155 !important;
+}
+
+[data-theme="light"] .footer-bottom {
+  border-top-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .copy-text {
+  color: #64748b !important;
+}
+
+/* 13. Theme Toggle Button in Light Mode */
+[data-theme="light"] .theme-toggle-btn {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06) !important;
+  color: #0066ee !important;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: #f8fafc !important;
+  border-color: #0066ee !important;
+  box-shadow: 0 0 16px rgba(0, 102, 238, 0.25) !important;
 }

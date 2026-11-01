@@ -11,9 +11,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './corporate.component.css'
 })
 export class CorporateComponent implements OnInit {
-  // Theme state (Dark Mode by default)
-  isDarkMode = true;
-
   // External project domains from catalog
   readonly gesdronUrl = 'https://gesdron.net';
   readonly depronUrl = 'https://depron.org';
@@ -21,15 +18,17 @@ export class CorporateComponent implements OnInit {
   // Navigation active state
   activeNavSection = 'hero';
 
+  // Theme state
+  isDarkMode = true;
+
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('rosat_theme');
       if (savedTheme) {
         this.setTheme(savedTheme === 'dark');
       } else {
-        // Check system preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        this.setTheme(prefersDark);
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        this.setTheme(prefersDark ?? true);
       }
     }
   }
@@ -38,7 +37,7 @@ export class CorporateComponent implements OnInit {
     this.setTheme(!this.isDarkMode);
   }
 
-  private setTheme(isDark: boolean): void {
+  setTheme(isDark: boolean): void {
     this.isDarkMode = isDark;
     const themeName = isDark ? 'dark' : 'light';
     if (typeof document !== 'undefined') {
