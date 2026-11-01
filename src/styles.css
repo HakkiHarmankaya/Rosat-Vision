@@ -317,13 +317,13 @@ button {
 }
 
 [data-theme="light"] .hero-bg-img {
-  opacity: 0.18 !important;
-  filter: grayscale(20%) brightness(1.15) contrast(0.85) !important;
+  opacity: 0.75 !important;
+  filter: brightness(0.92) contrast(1.06) !important;
 }
 
 [data-theme="light"] .hero-overlay-gradient {
-  background: radial-gradient(circle at 70% 30%, rgba(241, 245, 249, 0.4) 0%, rgba(241, 245, 249, 0.92) 75%),
-              linear-gradient(180deg, rgba(241, 245, 249, 0.8) 0%, rgba(241, 245, 249, 0.6) 40%, #f1f5f9 100%) !important;
+  background: radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.08) 0%, rgba(241, 245, 249, 0.55) 75%),
+              linear-gradient(180deg, rgba(241, 245, 249, 0.4) 0%, rgba(241, 245, 249, 0.15) 35%, rgba(241, 245, 249, 0.75) 85%, #f1f5f9 100%) !important;
 }
 
 [data-theme="light"] .hero-grid-lines {
@@ -336,14 +336,18 @@ button {
   background: linear-gradient(135deg, #0055d4 0%, #0084ff 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 1px 8px rgba(255, 255, 255, 0.8)) !important;
 }
 
 [data-theme="light"] .hero-heading {
   color: #0b1528 !important;
+  text-shadow: 0 1px 16px rgba(255, 255, 255, 0.9), 0 0 6px rgba(255, 255, 255, 0.8) !important;
 }
 
 [data-theme="light"] .hero-description {
-  color: #334155 !important;
+  color: #1e293b !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.95), 0 0 4px rgba(255, 255, 255, 0.8) !important;
 }
 
 [data-theme="light"] .hero-badge {
