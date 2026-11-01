@@ -1,10 +1,14 @@
-:root {
+:root,
+[data-theme="dark"] {
   /* Color Tokens - Backgrounds (Obsidian & Deep Slate Navy) */
   --bg-deep: #030712;
   --bg-dark: #070d1e;
   --bg-surface: #0c1529;
   --bg-card: rgba(12, 22, 44, 0.75);
   --bg-card-hover: rgba(16, 30, 60, 0.9);
+  --bg-header: rgba(6, 12, 24, 0.92);
+  --bg-input: rgba(5, 12, 26, 0.85);
+  --bg-footer: #020617;
   --border-subtle: rgba(0, 132, 255, 0.14);
   --border-light: rgba(255, 255, 255, 0.08);
   --border-active: rgba(0, 132, 255, 0.48);
@@ -31,6 +35,7 @@
 
   /* Typography Colors */
   --text-pure: #ffffff;
+  --text-title: #ffffff;
   --text-primary: #f0f6ff;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -55,6 +60,55 @@
   --shadow-glow-crimson: 0 0 30px rgba(255, 51, 68, 0.35);
 }
 
+[data-theme="light"] {
+  /* Color Tokens - Backgrounds (Clean, Professional Crisp Slate & Pearl White) */
+  --bg-deep: #f8fafc;
+  --bg-dark: #f1f5f9;
+  --bg-surface: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-input: #ffffff;
+  --bg-footer: #edf2f7;
+  --border-subtle: rgba(0, 102, 238, 0.18);
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-active: rgba(0, 102, 238, 0.55);
+
+  /* Brand Accents - Vibrant Corporate Blue with Strong Contrast */
+  --corp-primary: #0066ee;
+  --corp-secondary: #004ecc;
+  --corp-accent: #0284c7;
+  --corp-dark-blue: #0369a1;
+  --corp-glow: rgba(0, 102, 238, 0.18);
+  --corp-glow-strong: rgba(0, 102, 238, 0.35);
+
+  /* Project A - Solis */
+  --solis-primary: #d97706;
+  --solis-secondary: #b45309;
+  --solis-dark: #fef3c7;
+  --solis-glow: rgba(217, 119, 6, 0.25);
+
+  /* Project B - Rescue */
+  --rescue-primary: #e11d48;
+  --rescue-secondary: #be123c;
+  --rescue-dark: #ffe4e6;
+  --rescue-glow: rgba(225, 29, 72, 0.25);
+
+  /* Typography Colors */
+  --text-pure: #0f172a;
+  --text-title: #0f172a;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 0 15px -3px rgba(0, 102, 238, 0.06);
+  --shadow-glow: 0 0 25px rgba(0, 102, 238, 0.2);
+  --shadow-glow-amber: 0 0 25px rgba(217, 119, 6, 0.2);
+  --shadow-glow-crimson: 0 0 25px rgba(225, 29, 72, 0.2);
+}
+
 /* Global Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -69,6 +123,10 @@ html {
   max-width: 100%;
 }
 
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-deep);
@@ -78,6 +136,7 @@ body {
   max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Custom Scrollbar */
