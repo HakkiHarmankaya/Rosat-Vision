@@ -1,21 +1,21 @@
 :root {
-  /* Color Tokens - Backgrounds */
-  --bg-deep: #050a08;
-  --bg-dark: #09120f;
-  --bg-surface: #0e1c17;
-  --bg-card: rgba(12, 24, 20, 0.72);
-  --bg-card-hover: rgba(16, 33, 27, 0.88);
-  --border-subtle: rgba(0, 245, 155, 0.12);
+  /* Color Tokens - Backgrounds (Obsidian & Deep Slate Navy) */
+  --bg-deep: #030712;
+  --bg-dark: #070d1e;
+  --bg-surface: #0c1529;
+  --bg-card: rgba(12, 22, 44, 0.75);
+  --bg-card-hover: rgba(16, 30, 60, 0.9);
+  --border-subtle: rgba(0, 132, 255, 0.14);
   --border-light: rgba(255, 255, 255, 0.08);
-  --border-active: rgba(0, 245, 155, 0.45);
+  --border-active: rgba(0, 132, 255, 0.48);
 
-  /* Brand Accents - Corporate (Rosat Vision) */
-  --corp-primary: #00f59b;
-  --corp-secondary: #00c878;
-  --corp-accent: #2dd4bf;
-  --corp-dark-green: #032c1e;
-  --corp-glow: rgba(0, 245, 155, 0.35);
-  --corp-glow-strong: rgba(0, 245, 155, 0.65);
+  /* Brand Accents - Corporate (Rosat Vision) - Trustworthy Deep-Tech Blue */
+  --corp-primary: #0084ff;
+  --corp-secondary: #0055d4;
+  --corp-accent: #38bdf8;
+  --corp-dark-blue: #03142c;
+  --corp-glow: rgba(0, 132, 255, 0.35);
+  --corp-glow-strong: rgba(0, 132, 255, 0.65);
 
   /* Project A - Solis (Solar / GES) */
   --solis-primary: #ffaa00;
@@ -31,10 +31,10 @@
 
   /* Typography Colors */
   --text-pure: #ffffff;
-  --text-primary: #f0fdf7;
-  --text-secondary: #9cb3a8;
-  --text-muted: #647b71;
-  --text-dim: #3e5249;
+  --text-primary: #f0f6ff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-dim: #334155;
 
   /* Typography Families */
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -49,8 +49,8 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 20px -5px rgba(0, 245, 155, 0.08);
-  --shadow-glow: 0 0 30px rgba(0, 245, 155, 0.3);
+  --shadow-card: 0 16px 40px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(0, 132, 255, 0.1);
+  --shadow-glow: 0 0 30px rgba(0, 132, 255, 0.35);
   --shadow-glow-amber: 0 0 30px rgba(255, 170, 0, 0.35);
   --shadow-glow-crimson: 0 0 30px rgba(255, 51, 68, 0.35);
 }
@@ -65,6 +65,8 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -73,6 +75,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -87,7 +90,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #172d24;
+  background: #132238;
   border-radius: var(--radius-full);
 }
 
@@ -126,7 +129,7 @@ button {
 }
 
 .glass-pill {
-  background: rgba(14, 28, 23, 0.65);
+  background: rgba(12, 24, 46, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-subtle);
@@ -150,9 +153,9 @@ button {
   letter-spacing: 0.08em;
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  background: rgba(0, 245, 155, 0.1);
+  background: rgba(0, 132, 255, 0.12);
   color: var(--corp-primary);
-  border: 1px solid rgba(0, 245, 155, 0.3);
+  border: 1px solid rgba(0, 132, 255, 0.3);
 }
 
 .pulsing-dot {
@@ -181,8 +184,17 @@ button {
 }
 
 /* Glowing text utilities */
+.glow-text-blue,
 .glow-text-green {
-  text-shadow: 0 0 25px rgba(0, 245, 155, 0.4);
+  text-shadow: 0 0 25px rgba(0, 132, 255, 0.45);
+}
+
+.glow-text-amber {
+  text-shadow: 0 0 25px rgba(255, 170, 0, 0.4);
+}
+
+.glow-text-crimson {
+  text-shadow: 0 0 25px rgba(255, 51, 68, 0.4);
 }
 
 .glow-text-amber {
