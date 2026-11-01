@@ -1,0 +1,774 @@
+<div class="corporate-page">
+  <!-- Corporate Site Navigation Header -->
+  <header class="corp-header">
+    <div class="container corp-header-inner">
+      <div class="brand-group">
+        <!-- Official ROSAT VISION Logo -->
+        <a routerLink="/" class="brand-logo-link">
+          <img src="/images/rosat_logo.png" alt="ROSAT VİSİON Logo" class="rosat-official-logo-img" />
+        </a>
+        <div class="brand-text">
+          <div class="brand-title-row">
+            <span class="brand-title">ROSAT VİSİON</span>
+          </div>
+          <span class="brand-subtitle">TEKNOLOJİ A.Ş</span>
+        </div>
+      </div>
+
+      <!-- Navigation links matching catalog contents -->
+      <nav class="corp-nav" aria-label="Ana Menü">
+        <a (click)="scrollToSection('biz-kimiz')" class="nav-item">Biz Kimiz</a>
+        <a (click)="scrollToSection('yetkinlikler')" class="nav-item">Ar-Ge Yetkinlikleri</a>
+        <a (click)="scrollToSection('projeler')" class="nav-item">Projelerimiz</a>
+        <a (click)="scrollToSection('sektorel')" class="nav-item">Sektörel Çözümler</a>
+        <a (click)="scrollToSection('referanslar')" class="nav-item">Referanslar</a>
+        <a (click)="scrollToSection('iletisim')" class="nav-item">İletişim</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="header-cta">
+        <button (click)="scrollToSection('iletisim')" class="btn-primary-green" id="header-demo-btn">
+          <span>Proje & Teklif Al</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (Theme preserved from reference image, texts aligned to Catalog) -->
+  <section class="corp-hero" id="hero">
+    <!-- Background Image with Cinematic Overlays -->
+    <div class="hero-bg-wrapper">
+      <img src="/images/rosat_corp_hero.jpg" alt="ROSAT Vision Otonom Dron ve Enerji Altyapısı" class="hero-bg-img" />
+      <div class="hero-overlay-gradient"></div>
+      <div class="hero-grid-lines"></div>
+    </div>
+
+    <div class="container hero-content-container">
+
+      <!-- Big Title -->
+      <h1 class="hero-heading">
+        GELECEĞİN ENERJİ VE TEKNOLOJİ<br />
+        <span class="highlight-text">ALTYAPISINI YÖNETİYORUZ</span>
+      </h1>
+
+      <!-- Description from Catalog -->
+      <p class="hero-description">
+        2023 yılından itibaren derin teknoloji alanında yerli ve özgün Ar-Ge çalışmaları yürüten şirketimiz;
+        yapay zekâ, bilgisayarlı görü ve otonom İHA sistemleriyle yenilenebilir enerji santrallerinden afet sahalarına
+        kadar
+        yüksek katma değerli mühendislik çözümleri üretmektedir.
+      </p>
+
+      <!-- Key Stat Boxes (3 main glassmorphic cards from reference image) -->
+      <div class="hero-stats-grid">
+        <div class="stat-box glass-panel">
+          <div class="stat-number">10x</div>
+          <div class="stat-label">Hızlı Denetim</div>
+          <div class="stat-sub">Geleneksel Saha Muayenesine Kıyasla</div>
+        </div>
+
+        <div class="stat-box glass-panel">
+          <div class="stat-number">%99.4</div>
+          <div class="stat-label">Hücre Bazlı Doğruluk</div>
+          <div class="stat-sub">YOLOv8 & Termal Anomali Tespiti</div>
+        </div>
+
+        <div class="stat-box glass-panel">
+          <div class="stat-number">Uçtan Uca</div>
+          <div class="stat-label">Özgün Mühendislik</div>
+          <div class="stat-sub">Donanım, Gömülü Yazılım ve Yapay Zekâ</div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Project Portals (Redirects to other project domains) -->
+      <div class="hero-project-portals">
+        <!-- Portal 1: GESDRON -->
+        <a [href]="gesdronUrl" target="_blank" rel="noopener noreferrer" class="portal-card ges-portal glass-panel"
+          id="portal-card-gesdron">
+          <div class="portal-thumb-wrap">
+            <img src="/images/solis_drone_thumb.jpg" alt="GESDRON Otonom GES Denetim Sistemi"
+              class="portal-thumb-img" />
+            <div class="portal-thumb-overlay"></div>
+            <span class="portal-badge amber">gesdron.net</span>
+          </div>
+          <div class="portal-info">
+            <div class="portal-title-row">
+              <span class="portal-name">GESDRON</span>
+              <span class="portal-domain-tag">gesdron.net</span>
+              <span class="portal-arrow">↗</span>
+            </div>
+            <p class="portal-desc">Güneş enerjisi santrallerinde termal ve RGB görüntü işlemeyle hücre bazlı otonom
+              anomali tespiti ve dijital ikiz.</p>
+          </div>
+        </a>
+
+        <!-- Portal 2: DEPRON -->
+        <a [href]="depronUrl" target="_blank" rel="noopener noreferrer" class="portal-card rescue-portal glass-panel"
+          id="portal-card-depron">
+          <div class="portal-thumb-wrap">
+            <img src="/images/rescue_drone_thumb.jpg" alt="DEPRON Afet Yönetimi ve Arama Kurtarma Drone Sistemi"
+              class="portal-thumb-img" />
+            <div class="portal-thumb-overlay"></div>
+            <span class="portal-badge red">depron.org</span>
+          </div>
+          <div class="portal-info">
+            <div class="portal-title-row">
+              <span class="portal-name">DEPRON</span>
+              <span class="portal-domain-tag">depron.org</span>
+              <span class="portal-arrow">↗</span>
+            </div>
+            <p class="portal-desc">Afet sahalarında radar destekli enkaz altı canlı tespiti, yaşam belirtisi analizi ve
+              3B haritalama yapan otonom İHA.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BİZ KİMİZ & VİZYON / MİSYON (Catalog Page 2) -->
+  <section class="about-section" id="biz-kimiz">
+    <div class="container">
+      <div class="about-content-card glass-panel">
+        <div class="about-grid">
+          <div class="about-info">
+            <div class="tech-tag">
+              <span>ROSAT VİSİON TEKNOLOJİ A.Ş.</span>
+            </div>
+            <h2 class="about-title">BİZ KİMİZ?</h2>
+            <p class="about-p">
+              <strong>ROSAT VİSİON</strong>, 2023 yılından itibaren çeşitli ileri teknoloji projeleri üzerinde araştırma
+              ve geliştirme
+              çalışmaları yürüten ve 2026 yılında beş kurucu ortak tarafından kurulmuş bir derin teknoloji şirketidir.
+              Yapay zekâ, bilgisayarlı görü, insansız hava araçları (İHA) ve otonom sistemler başta olmak üzere ileri
+              teknoloji
+              alanlarında yenilikçi çözümler geliştirmeyi hedeflemektedir.
+            </p>
+            <p class="about-p">
+              Şirketimiz, teknolojik gelişmeleri yakından takip ederek Ar-Ge odaklı çalışmalar yürütmeyi, farklı
+              sektörlerin ihtiyaçlarına
+              yönelik yüksek katma değerli ve uygulanabilir teknolojiler üretmeyi amaçlar. Derin teknoloji alanındaki
+              mühendislik
+              uzmanlığını sürekli geliştiren ROSAT VİSİON, geliştirdiği özgün yazılım ve donanım çözümleriyle
+              operasyonel verimliliğin
+              artırılmasına ve teknolojinin etkin kullanımına öncülük etmektedir.
+            </p>
+
+            <!-- Vizyon & Misyon Cards -->
+            <div class="vision-mission-grid">
+              <div class="vm-card">
+                <div class="vm-badge">VİZYONUMUZ</div>
+                <h4 class="vm-title">Yerli ve Küresel Öncülük</h4>
+                <p class="vm-text">
+                  Yapay zekâ, görüntü işleme, insansız hava araçları ve otonom sistemler alanlarında çığır açan
+                  teknolojiler geliştirerek
+                  yerli sektörde lider ve uluslararası ölçekte rekabetçi bir marka olmak; yerli yazılım ve donanım
+                  gücüyle dışa bağımlılığı en aza indirmek.
+                </p>
+              </div>
+
+              <div class="vm-card">
+                <div class="vm-badge green">MİSYONUMUZ</div>
+                <h4 class="vm-title">Uçtan Uca Özgün Mühendislik</h4>
+                <p class="vm-text">
+                  Müşterilerimizin operasyonel ihtiyaçlarına yönelik özgün, güvenilir ve sürdürülebilir teknoloji
+                  çözümleri sunmak.
+                  Yazılım ve donanım yetkinliklerimizi entegre ederek anahtar teslim uçtan uca sistemler geliştirmek ve
+                  sektörel verimliliği artırmak.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-metric-column">
+            <div class="metric-card logo-spotlight-card glass-panel">
+              <img src="/images/rosat_logo.png" alt="ROSAT VİSİON Logo" class="about-spotlight-logo" />
+              <div class="metric-text-highlight">Tescilli Derin Teknoloji Markası</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-big tech-mono">2023–2026</div>
+              <div class="metric-text">Ar-Ge ve Derin Teknoloji Deneyimi</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-big tech-mono">5 Kurucu</div>
+              <div class="metric-text">Multidisipliner Mühendislik Ekibi</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-big tech-mono">Teknopark</div>
+              <div class="metric-text">İstanbul Pendik Ar-Ge Yerleşkesi</div>
+            </div>
+            <div class="metric-card glass-panel">
+              <div class="metric-big tech-mono">%100 Yerli</div>
+              <div class="metric-text">Özgün Donanım, Yazılım ve Algoritmalar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AR-GE VE TEMEL YETKİNLİKLERİMİZ (Catalog Page 2) -->
+  <section class="capabilities-section" id="yetkinlikler">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tech-tag">
+          <span>AR-GE ODAK ALANLARIMIZ</span>
+        </div>
+        <h2 class="section-title">Teknoloji & Mühendislik Yetkinlikleri</h2>
+        <p class="section-subtitle">
+          ROSAT Vision; batarya mimarisinden gömülü yazılıma, aerodinamik İHA üretiminden derin öğrenme algoritmalarına
+          kadar tam bağımsız mühendislik yürütür.
+        </p>
+      </div>
+
+      <div class="capabilities-grid">
+        <!-- 1. Enerji ve Akıllı Batarya Sistemleri -->
+        <div class="cap-card glass-panel">
+          <div class="cap-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2">
+              <rect x="2" y="7" width="16" height="12" rx="2"></rect>
+              <line x1="20" y1="11" x2="20" y2="15"></line>
+              <line x1="6" y1="11" x2="6" y2="15"></line>
+              <line x1="10" y1="11" x2="10" y2="15"></line>
+            </svg>
+          </div>
+          <h3 class="cap-title">Enerji ve Akıllı Batarya Sistemleri</h3>
+          <p class="cap-text">
+            Proje gereksinimlerine, uçuş sürelerine ve cihaz tasarımlarına tam uyumlu, farklı kapasite ve ölçülerde
+            yüksek performanslı lityum pil paketlerinin tasarlanması ve oluşturulması.
+          </p>
+          <ul class="cap-features">
+            <li>Özel paketleme ve hücre eşleme</li>
+            <li>Akıllı Batarya Yönetim Sistemi (BMS)</li>
+            <li>Uzatılmış görev uçuş süreleri</li>
+          </ul>
+        </div>
+
+        <!-- 2. Yapay Zekâ & Bilgisayarlı Görü (Computer Vision) -->
+        <div class="cap-card glass-panel">
+          <div class="cap-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"></path>
+            </svg>
+          </div>
+          <h3 class="cap-title">Yapay Zekâ & Bilgisayarlı Görü</h3>
+          <p class="cap-text">
+            YOLO tabanlı gerçek zamanlı nesne tespiti, gelişmiş görüntü işleme algoritmaları, termal görüntü analizi ve
+            endüstriyel tesisler ile sahalar için otomatik hata/anomali tespiti.
+          </p>
+          <ul class="cap-features">
+            <li>YOLOv8 tabanlı nesne tespiti</li>
+            <li>Termal ve RGB anomali sınıflandırma</li>
+            <li>Endüstriyel saha anlık kalite kontrolü</li>
+          </ul>
+        </div>
+
+        <!-- 3. Özel Drone Tasarımı ve Üretimi -->
+        <div class="cap-card glass-panel">
+          <div class="cap-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="cap-title">Özel Drone Tasarımı ve Üretimi</h3>
+          <p class="cap-text">
+            Görev profillerine özel insansız hava aracı (İHA) tasarımı, 3D CAD mekanik modelleme, aerodinamik gövde
+            optimizasyonu ve lazer kesim teknolojileriyle yüksek mukavemetli parça üretimi.
+          </p>
+          <ul class="cap-features">
+            <li>3D CAD mekanik modelleme</li>
+            <li>Aerodinamik gövde optimizasyonu</li>
+            <li>Lazer kesim ve mukavemetli kompozitler</li>
+          </ul>
+        </div>
+
+        <!-- 4. Uçuş Kontrol ve Gömülü Yazılım -->
+        <div class="cap-card glass-panel">
+          <div class="cap-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00f59b" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+              <rect x="9" y="9" width="6" height="6"></rect>
+              <line x1="9" y1="1" x2="9" y2="4"></line>
+              <line x1="15" y1="1" x2="15" y2="4"></line>
+              <line x1="9" y1="20" x2="9" y2="23"></line>
+              <line x1="15" y1="20" x2="15" y2="23"></line>
+              <line x1="20" y1="9" x2="23" y2="9"></line>
+              <line x1="20" y1="14" x2="23" y2="14"></line>
+              <line x1="1" y1="9" x2="4" y2="9"></line>
+              <line x1="1" y1="14" x2="4" y2="14"></line>
+            </svg>
+          </div>
+          <h3 class="cap-title">Uçuş Kontrol ve Gömülü Yazılım</h3>
+          <p class="cap-text">
+            Otonom uçuş kontrol sistemleri, kesintisiz telemetri çözümleri, mikrodenetleyici entegrasyonları ve donanım
+            bileşenleriyle tam uyumlu gömülü yazılım geliştirme.
+          </p>
+          <ul class="cap-features">
+            <li>Mikrodenetleyici & RTOS entegrasyonu</li>
+            <li>Kesintisiz telemetri ve güvenli bağlantı</li>
+            <li>Otonom rota ve acil iniş algoritmaları</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PROJELERİMİZ BÖLÜMÜ (Catalog Page 3 - Direct External Redirection) -->
+  <section class="flagship-section" id="projeler">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tech-tag">
+          <span>AMİRAL PROJELERİMİZ</span>
+        </div>
+        <h2 class="section-title">ROSAT Vision Teknoloji Projeleri</h2>
+        <p class="section-subtitle">
+          Şirketimizin geliştirdiği özgün projeler bağımsız domainleri ve platformları üzerinden hizmet vermektedir.
+        </p>
+      </div>
+
+      <div class="projects-detailed-grid">
+        <!-- 1. GESDRON (gesdron.net) -->
+        <div class="project-detail-card solis-theme glass-panel">
+          <div class="p-card-header">
+            <div class="p-media">
+              <img src="/images/solis_drone_thumb.jpg" alt="GESDRON Güneş Enerjisi Santralleri Otonom Denetim Sistemi"
+                class="p-img" />
+              <div class="p-domain-chip amber">gesdron.net</div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <div class="p-brand-tag amber tech-mono">GÜNEŞ ENERJİSİ SANTRALLERİ OTONOM DENETİM SİSTEMİ</div>
+            <h3 class="p-main-title">GESDRON</h3>
+            <p class="p-description">
+              Yapay zekâ ve termal görüntü işleme teknolojisiyle güneş enerjisi santrallerindeki hücre bazlı anomalileri
+              otonom tespit eden ve dijital ikiz oluşturan platform.
+            </p>
+
+            <ul class="p-feature-list">
+              <li>
+                <strong>Otonom GES Denetimi:</strong> Termal ve RGB görüntü işlemeyle hücre bazlı panel anomali tespiti.
+              </li>
+              <li>
+                <strong>Yapay Zekâ & Dijital İkiz:</strong> Ortofoto haritalama, otomatik arıza sınıflandırma ve coğrafi
+                saha yönetimi.
+              </li>
+              <li>
+                <strong>Akıllı Raporlama:</strong> Arızalı panel konumlarını teknisyene anında atayan otonom yazılım
+                platformu.
+              </li>
+              <li>
+                <strong>Sektörel Kazanım:</strong> Denetim hızında 10x artış, minimum enerji kaybı ve düşük bakım
+                maliyeti.
+              </li>
+            </ul>
+
+            <div class="p-action-row">
+              <a [href]="gesdronUrl" target="_blank" rel="noopener noreferrer" class="btn-external-domain amber-btn"
+                id="btn-visit-gesdron">
+                <span>gesdron.net Sitesini Ziyaret Et</span>
+                <span class="arrow-ext">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DEPRON (depron.org) -->
+        <div class="project-detail-card rescue-theme glass-panel">
+          <div class="p-card-header">
+            <div class="p-media">
+              <img src="/images/rescue_drone_thumb.jpg" alt="DEPRON Afet Yönetimi ve Arama Kurtarma Drone Sistemi"
+                class="p-img" />
+              <div class="p-domain-chip red">depron.org</div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <div class="p-brand-tag red tech-mono">AFET YÖNETİMİ VE ARAMA KURTARMA DRONE SİSTEMİ</div>
+            <h3 class="p-main-title">DEPRON</h3>
+            <p class="p-description">
+              Afet sahalarında radar destekli enkaz altı canlı tespiti, yaşam belirtisi analizi ve 3B afet
+              haritalandırması yapan özgün otonom arama-kurtarma İHA sistemi.
+            </p>
+
+            <ul class="p-feature-list">
+              <li>
+                <strong>Arama Kurtarma İHA:</strong> Afet sahalarında radar destekli enkaz altı canlı tespiti yapan
+                otonom drone.
+              </li>
+              <li>
+                <strong>Radar & Derin Teknoloji:</strong> Enkaz ve toprak altında yaşam belirtisi analizi ve hassas
+                konumlama.
+              </li>
+              <li>
+                <strong>Otonom Görev & AI:</strong> Gerçek zamanlı YOLOv8 nesne tespiti, otonom uçuş ve 3B afet
+                haritalama.
+              </li>
+              <li>
+                <strong>Kritik Saha Etkisi:</strong> Kurtarma ekiplerini doğrudan hedefe yönlendirerek müdahaleyi
+                hızlandırır.
+              </li>
+            </ul>
+
+            <div class="p-action-row">
+              <a [href]="depronUrl" target="_blank" rel="noopener noreferrer" class="btn-external-domain red-btn"
+                id="btn-visit-depron">
+                <span>depron.org Sitesini Ziyaret Et</span>
+                <span class="arrow-ext">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. VMS ENTEGRASYONU (rosatvision.com) -->
+        <div class="project-detail-card vms-theme glass-panel">
+          <div class="p-card-header">
+            <div class="p-media">
+              <img src="/images/vms_person_tracking.jpg" alt="VMS Entegrasyonu, Yapay Zekâ Destekli Kamera ve İnsan Takibi"
+                class="p-img" />
+              <div class="p-domain-chip green">rosatvision.com</div>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <div class="p-brand-tag green tech-mono">KAMERA ALTYAPILARINDA AKILLI VİDEO ANALİTİĞİ</div>
+            <h3 class="p-main-title">VMS Entegrasyonu & AI Görüntü İşleme</h3>
+            <p class="p-description">
+              Mevcut CCTV ve VMS kamera altyapılarını bulut gerektirmeyen On-Premise yerel sunucularda yapay zekâlı
+              sensörlere dönüştüren güvenlik ve optimizasyon çözümü.
+            </p>
+
+            <ul class="p-feature-list">
+              <li>
+                <strong>Akıllı Video Analitiği:</strong> Mevcut kameraları (CCTV/VMS) yapay zekâ destekli akıllı
+                sensörlere dönüştürür.
+              </li>
+              <li>
+                <strong>Esnek & Güvenli Mimari:</strong> Bulut gerektirmeyen yerel sunucu (On-Premise) ile tam kurumsal
+                veri güvenliği.
+              </li>
+              <li>
+                <strong>Gerçek Zamanlı Tespit:</strong> Yaya, araç, iş makinesi, İSG ihlali ve üretim hatalarının anlık
+                analizi.
+              </li>
+              <li>
+                <strong>Sektörel Uyum:</strong> Otomotiv, OSB, inşaat, perakende ve tekstil için özelleştirilebilir
+                otomasyon.
+              </li>
+            </ul>
+
+            <div class="p-action-row">
+              <button (click)="scrollToSection('iletisim')" class="btn-external-domain green-btn" id="btn-vms-contact">
+                <span>VMS Çözümü İçin Demo Talep Et</span>
+                <span class="arrow-ext">↓</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKTÖREL ÇÖZÜMLERİMİZ (Catalog Page 4) -->
+  <section class="sectors-section" id="sektorel">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tech-tag">
+          <span>HİZMET VERDİĞİMİZ ALANLAR</span>
+        </div>
+        <h2 class="section-title">Sektörel Çözümlerimiz</h2>
+        <p class="section-subtitle">
+          Savunmadan enerjiye, üretimden afet yönetimine kadar kritik endüstrilere özel anahtar teslim teknoloji
+          çözümleri.
+        </p>
+      </div>
+
+      <div class="sectors-grid">
+        <div class="sector-card glass-panel">
+          <div class="sector-icon">🛡️</div>
+          <h3 class="sector-title">Savunma Sanayii</h3>
+          <p class="sector-desc">Özel İHA tasarımı, 3D modelleme, lazer kesim ve gömülü yazılım geliştirme.</p>
+        </div>
+
+        <div class="sector-card glass-panel">
+          <div class="sector-icon">⚡</div>
+          <h3 class="sector-title">Enerji Sektörü</h3>
+          <p class="sector-desc">GES sahaları termal denetimi, yapay zekâ arıza tespiti ve otomatik raporlama.</p>
+        </div>
+
+        <div class="sector-card glass-panel">
+          <div class="sector-icon">🏭</div>
+          <h3 class="sector-title">Otomotiv ve Üretim</h3>
+          <p class="sector-desc">Bilgisayarlı görü, kalite kontrol ve süreç verimliliği otomasyonu.</p>
+        </div>
+
+        <div class="sector-card glass-panel">
+          <div class="sector-icon">🚨</div>
+          <h3 class="sector-title">Afet ve Acil Durum</h3>
+          <p class="sector-desc">Radar destekli canlı tespiti, otonom uçuş ve 3B afet haritalandırma.</p>
+        </div>
+
+        <div class="sector-card glass-panel">
+          <div class="sector-icon">💻</div>
+          <h3 class="sector-title">Özel Yazılım ve Donanım</h3>
+          <p class="sector-desc">Kuruma özel yazılım, elektronik sistem tasarımı ve uçtan uca entegrasyon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERANSLAR VE STRATEJİK İŞ BİRLİKLERİ (Catalog Page 4) -->
+  <section class="references-section" id="referanslar">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="tech-tag">
+          <span class="pulsing-dot"></span>
+          <span>STRATEJİK İŞ BİRLİKLERİMİZ</span>
+        </div>
+        <h2 class="section-title">Referanslar ve Stratejik Ortaklar</h2>
+        <p class="section-subtitle">
+          Ulusal ve uluslararası sahalarda derin teknoloji, afet yönetimi ve yapay zekâ projelerinde birlikte
+          çalıştığımız kurumlar.
+        </p>
+      </div>
+
+      <div class="references-grid">
+        <div class="ref-badge-card glass-panel">
+          <div class="ref-name">AFAD</div>
+          <div class="ref-category">Afet Yönetimi</div>
+        </div>
+
+        <div class="ref-badge-card glass-panel">
+          <div class="ref-name">SAVUNMA SANAYİİ</div>
+          <div class="ref-category">Stratejik Proje</div>
+        </div>
+
+        <div class="ref-badge-card glass-panel">
+          <div class="ref-name">MYELION</div>
+          <div class="ref-category">Görüntü İşleme</div>
+        </div>
+
+        <div class="ref-badge-card glass-panel">
+          <div class="ref-name">FROM YOUR EYES</div>
+          <div class="ref-category">Görüntü İşleme</div>
+        </div>
+
+        <div class="ref-badge-card glass-panel">
+          <div class="ref-name">NEUROVISION</div>
+          <div class="ref-category">Yapay Zekâ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & COOPERATION SECTION (İLETİŞİM / FIREBASE READY) -->
+  <section class="contact-section" id="iletisim">
+    <div class="container">
+      <div class="contact-card glass-panel">
+        <div class="contact-grid">
+          <div class="contact-text-side">
+            <div class="tech-tag">
+              <span class="pulsing-dot"></span>
+              <span>İLETİŞİM & PROJE BAŞVURUSU</span>
+            </div>
+            <h2 class="contact-title">Tesisiniz İçin Ar-Ge ve Otonom Teknoloji Çözümleri</h2>
+            <p class="contact-subtitle">
+              GES denetimi, arama-kurtarma İHA filoları veya kurumsal yapay zekâ görüntü işleme entegrasyonu için
+              Teknopark İstanbul Ar-Ge ofisimizle iletişime geçin.
+            </p>
+
+            <div class="contact-details">
+              <div class="c-detail-item">
+                <div class="c-icon">📍</div>
+                <div>
+                  <div class="c-label">Genel Merkez & Ar-Ge Kampüsü</div>
+                  <div class="c-val">ROSAT VİSİON TEKNOLOJİ A.Ş. — İSTANBUL TEKNOPARK</div>
+                  <div class="c-sub-val">Sanayi Mah. Teknopark Bulvarı No: 1/C Z08 Pendik / İSTANBUL</div>
+                </div>
+              </div>
+
+              <div class="c-detail-item">
+                <div class="c-icon">📞</div>
+                <div>
+                  <div class="c-label">Telefon & İletişim Hattı</div>
+                  <div class="c-val">+90 546 947 21 29</div>
+                  <div class="c-val">+90 539 599 93 36</div>
+                </div>
+              </div>
+
+
+              <div class="c-detail-item">
+                <div class="c-icon">✉️</div>
+                <div>
+                  <div class="c-label">Kurumsal E-Posta</div>
+                  <div class="c-val">info@rosatvision.com</div>
+                </div>
+              </div>
+
+              <div class="c-detail-item">
+                <div class="c-icon">🌐</div>
+                <div>
+                  <div class="c-label">Resmi Web Adreslerimiz</div>
+                  <div class="c-val tech-mono">
+                    <a href="https://rosatvision.com" class="link-sub">rosatvision.com</a> •
+                    <a href="https://gesdron.net" target="_blank" class="link-sub">gesdron.net</a> •
+                    <a href="https://depron.org" target="_blank" class="link-sub">depron.org</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Form (Firebase Firestore Ready) -->
+          <div class="contact-form-side">
+            <form (ngSubmit)="onSubmitContact()" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Ad Soyad *</label>
+                  <input type="text" id="contact-name" [(ngModel)]="contactForm.fullName" name="fullName"
+                    placeholder="Adınız ve Soyadınız" required class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label for="contact-company">Kurum / Şirket Adı</label>
+                  <input type="text" id="contact-company" [(ngModel)]="contactForm.company" name="company"
+                    placeholder="Şirket, Kurum veya Santral Adı" class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-email">Kurumsal E-posta *</label>
+                  <input type="email" id="contact-email" [(ngModel)]="contactForm.email" name="email"
+                    placeholder="ornek@sirket.com" required class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Telefon Numarası</label>
+                  <input type="tel" id="contact-phone" [(ngModel)]="contactForm.phone" name="phone"
+                    placeholder="+90 5XX XXX XX XX" class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-interest">İlgilendiğiniz Çözüm / Proje</label>
+                <select id="contact-interest" [(ngModel)]="contactForm.interest" name="interest"
+                  class="form-input form-select">
+                  <option value="gesdron">GESDRON: Otonom GES Denetim Sistemi (gesdron.net)</option>
+                  <option value="depron">DEPRON: Afet Yönetimi & Radar Canlı Tespiti (depron.org)</option>
+                  <option value="vms">VMS Entegrasyonu & AI Akıllı Video Analitiği</option>
+                  <option value="ozel-iha">Özel İHA Tasarımı, Batarya & Gömülü Yazılım</option>
+                  <option value="arge">Ortak Ar-Ge ve Stratejik Proje İş Birliği</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-msg">Mesajınız / Proje Detayları</label>
+                <textarea id="contact-msg" [(ngModel)]="contactForm.message" name="message" rows="4"
+                  placeholder="İhtiyaç duyduğunuz teknik kapsamı veya saha detaylarını belirtebilirsiniz..."
+                  class="form-input"></textarea>
+              </div>
+
+              <div class="kvkk-notice">
+                <span class="lock-icon">🔒</span>
+                <span>KVKK: Kişisel verileriniz mevzuat kapsamında korunmakta ve gizlilik ilkeleri uyarınca
+                  işlenmektedir.</span>
+              </div>
+
+              <button type="submit" [disabled]="isSubmitting" class="btn-primary-green btn-submit-full"
+                id="btn-submit-contact">
+                <span *ngIf="!isSubmitting">Teklif ve Bilgi Talebi Gönder</span>
+                <span *ngIf="isSubmitting">Gönderiliyor (Firebase Entegrasyonu)...</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div *ngIf="submitSuccess" class="form-success-alert glass-panel">
+                <span class="success-icon">✓</span>
+                <div>
+                  <strong>Talebiniz Başarıyla Alındı!</strong>
+                  <p>Mühendislik ekibimiz en kısa sürede sizinle iletişime geçecektir.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATE FOOTER (Catalog Page 4) -->
+  <footer class="corp-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-group">
+            <img src="/images/rosat_logo.png" alt="ROSAT VİSİON Logo" class="rosat-official-logo-img small" />
+            <div class="brand-text">
+              <span class="brand-title">ROSAT VİSİON</span>
+              <span class="brand-subtitle">TEKNOLOJİ A.Ş</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Yapay zekâ, bilgisayarlı görü ve otonom insansız hava araçlarıyla enerji, sanayi ve afet yönetiminde
+            geleceğin teknolojisini tasarlıyoruz.
+          </p>
+          <div class="footer-address">
+            <strong>Teknopark İstanbul</strong> • Sanayi Mah. Teknopark Bulvarı No: 1/C Z08 Pendik / İSTANBUL
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Proje Domainlerimiz</div>
+          <ul class="footer-list">
+            <li><a href="https://rosatvision.com" class="footer-link">🏢 rosatvision.com (Ana Portal)</a></li>
+            <li><a [href]="gesdronUrl" target="_blank" rel="noopener noreferrer" class="footer-link ext">☀️ gesdron.net
+                (GES Denetim) ↗</a></li>
+            <li><a [href]="depronUrl" target="_blank" rel="noopener noreferrer" class="footer-link ext">🚨 depron.org
+                (Afet & Radar) ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Hızlı Bağlantılar</div>
+          <ul class="footer-list">
+            <li><a (click)="scrollToSection('biz-kimiz')" class="footer-link">Biz Kimiz</a></li>
+            <li><a (click)="scrollToSection('yetkinlikler')" class="footer-link">Ar-Ge Yetkinlikleri</a></li>
+            <li><a (click)="scrollToSection('projeler')" class="footer-link">Projelerimiz</a></li>
+            <li><a (click)="scrollToSection('sektorel')" class="footer-link">Sektörel Çözümler</a></li>
+            <li><a (click)="scrollToSection('iletisim')" class="footer-link">Teklif & İletişim</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">İletişim & Lokasyon</div>
+          <div class="footer-contact-info">
+            <div>📞 0546 947 21 29</div>
+            <div>✉️ info&#64;rosatvision.com</div>
+            <div class="footer-chips">
+              <span class="f-chip">Teknopark İstanbul</span>
+              <span class="f-chip">Firebase Cloud</span>
+              <span class="f-chip">YOLOv8 On-Edge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copy-text">
+          © 2026 ROSAT VİSİON TEKNOLOJİ A.Ş. Tüm hakları saklıdır.
+        </div>
+        <div class="footer-system-status">
+          <span class="pulsing-dot"></span>
+          <span class="tech-mono">SİSTEM DURUMU: %99.99 OPERASYONEL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
