@@ -333,21 +333,23 @@ button {
 }
 
 [data-theme="light"] .highlight-text {
-  background: linear-gradient(135deg, #0055d4 0%, #0084ff 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 1px 8px rgba(255, 255, 255, 0.8)) !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: #0052cc !important;
+  color: #0052cc !important;
+  filter: none !important;
+  text-shadow: none !important;
 }
 
 [data-theme="light"] .hero-heading {
   color: #0b1528 !important;
-  text-shadow: 0 1px 16px rgba(255, 255, 255, 0.9), 0 0 6px rgba(255, 255, 255, 0.8) !important;
+  text-shadow: none !important;
 }
 
 [data-theme="light"] .hero-description {
   color: #1e293b !important;
   font-weight: 500 !important;
-  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.95), 0 0 4px rgba(255, 255, 255, 0.8) !important;
+  text-shadow: none !important;
 }
 
 [data-theme="light"] .hero-badge {
